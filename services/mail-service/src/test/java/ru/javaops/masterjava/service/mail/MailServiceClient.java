@@ -17,8 +17,8 @@ public class MailServiceClient {
         MailService mailService = service.getPort(MailService.class);
 
         ImmutableSet<Addressee> addressees = ImmutableSet.of(
-                new Addressee("gkislin@javaops.ru"),
-                new Addressee("Мастер Java <masterjava@javaops.ru>"),
+                new Addressee("antzub@ya.ru.ru"),
+                new Addressee("Мастер Java <acexe7@gmail.com>"),
                 new Addressee("Bad Email <bad_email.ru>"));
 
         String status = mailService.sendToGroup(addressees, ImmutableSet.of(), "Bulk email subject", "Bulk email body");
