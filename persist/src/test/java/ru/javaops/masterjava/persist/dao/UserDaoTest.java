@@ -33,7 +33,7 @@ public class UserDaoTest extends AbstractDaoTest<UserDao> {
 
     @Test
     public void getWithLimit() {
-        List<User> users = dao.getWithLimit(5);
+        List<User> users = dao.getWithLimit(6);
         Assert.assertEquals(FIST5_USERS, users);
     }
 
@@ -41,7 +41,7 @@ public class UserDaoTest extends AbstractDaoTest<UserDao> {
     public void insertBatch() throws Exception {
         dao.clean();
         dao.insertBatch(FIST5_USERS, 3);
-        Assert.assertEquals(5, dao.getWithLimit(100).size());
+        Assert.assertEquals(6, dao.getWithLimit(100).size());
     }
 
     @Test
